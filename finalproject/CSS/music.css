@@ -1,0 +1,247 @@
+/*use utf-8 in this file*/
+@charset "utf-8";
+
+
+/*set background*/
+body {
+	background: url(../img/campus1.png) no-repeat; 
+	background-size: 1950px 950px;
+}
+
+
+
+/*----------- banner begin -------------*/
+/*set banner css style*/
+.banner{
+	width: 960px;
+	height: 250px;
+	background: url(../img/bg.jpg) no-repeat;
+	margin: 80px;
+	opacity: 0.8; /*add opacity*/
+	box-shadow: 10px 15px 15px 1px black; /* add shadow to the box*/
+/*box-shadow: 右半边长度 上下移动 模糊程度 缩放*/
+	position: relative; /*relative position, let elements according to father elements*/
+}
+
+/*set li css style*/
+.banner ul li{
+	list-style: none; /*cancel default style*/
+	display: inline-block; /*same as float left, here is inline block elements*/
+	position: absolute; /*absolute position according to father elements*/
+	top: 0;
+}
+
+
+/*set pictures imgs*/
+.banner ul li img{
+	border-radius: 50%;  /* radius for img*/
+	cursor: pointer; /*hover style gosture*/
+}
+
+/*use class selector to change imgs position*/
+.m1{margin-top: 30px; left: 90px; }
+.m2{margin-top: 140px; left: 160px; }
+.m3{margin-top: 67px; left: 308px; }
+.m4{margin-top: 50px; left: 500px; }
+.m5{margin-top: 160px; left: 580px; }
+
+
+/*picture rotate when play the index music*/
+@keyframes img_rotate{
+	from{
+		transform: rotate(0deg);
+	} to {
+		transform: rotate(360deg);
+	}
+}
+
+/*bingding animation to div, use .img_rotate to bind in js*/
+.banner .img_rotate {
+	animation: img_rotate 2s infinite;
+}
+
+/*----------- banner end -------------*/
+
+
+/*----------- title start -------------*/
+
+.title {
+	width: 100%;
+	float: right;
+}
+
+.title h1{
+	float: right;
+	width: 65%;
+	color: whitesmoke;
+	font-size: 45px;
+	font-style: italic;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 20px;
+}
+
+.title .paragraph{
+	float: right;
+	width: 45%;
+	color: whitesmoke;
+	font-size: 32px;
+	font-style: italic;
+	background-color: rgba(0, 0, 0, 0.8);
+	/*transform: translateY(-50px);*/
+	padding: 10px;
+}
+/*----------- title end -------------*/
+
+
+/*----------- music player begin -------------*/
+
+/*set player css style*/
+.music{
+	width: 550px;
+	height: 120px;
+	background: black;
+	position: fixed;
+	left: 0px;
+	bottom: 200px;
+	opacity: 0.8;
+	box-shadow: 10px 15px 15px 1px black;
+}
+
+
+/*set player picture*/
+.music .m_img{
+	margin-top: 15px;
+	margin-left:  10px;
+	float: left;
+}
+
+/*set player text*/
+.music .m_text{
+	float: left;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+
+
+/*set all btns move together*/
+.music .m_btn{
+	float: left;
+	position: absolute;/*prevent names too long to change the player controller*/
+	left: 320px;
+}
+
+/*set a tag width, height and background*/
+.music .m_btn a{
+	float: left;
+	width: 35px;
+	height: 35px;
+	background: url(../img/player_bg.png);
+	margin-top: 52px; /*set position for controller*/
+	margin-left: 28px;
+}
+
+/*change last song picture*/
+.music .m_btn .m_prev{
+	background-position: -79px -3.5px;
+	background-size: 850px;
+}
+
+/*hover for last song picture*/
+.music .m_btn .m_prev:hover{
+	background-position: -79px -37px;
+	background-size: 850px;
+}
+
+
+/*change stop song picture*/
+.music .m_btn .m_play{
+	background-position: -120px -5px;
+	background-size: 850px;
+	margin-top: 46px;
+	transform: translateX(5px);
+}
+
+/*hover for stop song picture*/
+.music .m_btn .m_play:hover{
+	background-position: -120px -49px;
+	background-size: 850px;
+	margin-top: 46px;
+	transform: translateX(5px);
+}
+
+
+/*change next song picture*/
+.music .m_btn .m_next{
+	background-position: -155px -3.5px;
+	background-size: 850px;
+}
+
+/*hover for next song picture*/
+.music .m_btn .m_next:hover{
+	background-position: -155px -37px;
+	background-size: 850px;
+}
+
+
+/*set close tag*/
+.music .m_close{
+	float: right;
+	background: url(../img/player_bg.png);
+	width: 23px;
+	height: 120px;
+	background-size: 880px;
+	background-position: -2px -1px;
+	margin-top: 3px;
+	cursor: pointer;
+}
+
+/*change play btn to stop btn*/
+.music .m_btn .m_pause {
+	background-position: -320px -98px;
+	background-size: 850px;
+	transform: translateX(6px) translateY(-5px);
+}
+
+/*change play btn to stop btn*/
+.music .m_btn .m_pause:hover {
+	background-position: -362px -98px;
+	transform: translateX(3.9px) translateY(-5px);
+}
+
+
+/*change player style when hide the player*/
+.music .m_open{
+	background-position: -53px 0px;
+}
+
+
+/*function button*/
+.function_button button{
+	position: absolute;
+	color: whitesmoke;
+	font-size: 32px;
+	transform: translateX(240px) translateY(90px);
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/*click function button*/
+.function_button button:hover{
+	position: absolute;
+	font-size: 32px;
+	transform: translateX(240px) translateY(90px);
+	color: #fff;
+    background: #0a90f5;
+}
+
+
+
+/*----------- music player end -------------*/
+
+
+
+

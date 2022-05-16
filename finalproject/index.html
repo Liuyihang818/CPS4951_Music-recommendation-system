@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>music recommendation based on emotion analysis</title>
+	<!-- import css file -->
+	<link rel="stylesheet" type="text/css" href="css/music.css">
+
+
+</head>
+<body>
+
+
+	<!--------------------------- banner begin --------------------------------->
+
+	<div class="banner">
+		<ul>
+			<!-- use datasrc here to set temporary variable for audio tag play -->
+			<!-- 用中文讲就是点击这个li然后可以替换后面的audio的src -->
+			<li class="m1" datasrc="mp3/1.mp3" title="Freeloop-Daniel Powter">
+				<img src="img/song1.png" width="65" height="65">
+			</li>
+			<li class="m2" datasrc="mp3/2.mp3" title="Gotten-Slash">
+				<img src="img/song2.png" width="65" height="65">
+			</li>
+			<li class="m3" datasrc="mp3/3.mp3" title="本草纲目-周杰伦">
+				<img src="img/song3.png" width="119" height="119">
+			</li>
+			<li class="m4" datasrc="mp3/4.mp3" title="海阔天空-Beyond">
+				<img src="img/song4.png" width="90" height="90">
+			</li>
+			<li class="m5" datasrc="mp3/5.mp3" title="龙拳-周杰伦">
+				<img src="img/song5.png" width="65" width="65"> 
+			</li>
+		</ul>
+
+		<!-- <audio src="mp3/"></audio> -->
+
+	</div>
+
+<!---------------------------- banner end -------------------------------------->
+
+
+
+<!---------------------------- title start -------------------------------------->
+	<div class="title">
+		<h1>Music Recommendation System</h1>
+		<div class="paragraph">
+		<p>Music recommendation system will recommend songs based <br>
+			on the user's real-time heart rate and playback records.</p>
+		</div>	
+	</div>
+<!---------------------------- title end -------------------------------------->
+
+
+
+<!---------------------------- music player begin -------------------------------->
+
+
+	<div class="music">
+		<div class="m_img">
+			<img src="img/song1.png" width="90">
+		</div>
+		<div class="m_text">Freeloop-Daniel Powter</div>
+		<div class="m_btn">
+			<a href="#" class="m_prev" title="Last Song"></a>
+			<a href="#" class="m_play" title="Play"></a>
+			<a href="#" class="m_next" title="Next Song"></a>
+		</div>
+		<div class="m_close"></div>
+		<audio src="mp3/1.mp3" class="m_mp3"></audio>
+	</div>
+
+	<!-- click to use the function -->
+	<div class="function_button">
+		<button type="button" class="m_function" id="function_btn">Start!</button>
+	</div>
+<!---------------------------- music player end -------------------------------->
+
+
+
+
+<!------------------------------- import jQuery file -------------------------->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+<!------------------------------- import js file ------------------------------>
+<script type="text/javascript" src="js/music.js"></script>
+
+
+</body>
+</html>
